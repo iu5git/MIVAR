@@ -1,7 +1,7 @@
 # MIVAR
 Репозиторий материалов по проектам МИВАР
 
-[Документация](https://github.com/iu5git/MIVAR/guides)
+[Документация](https://github.com/iu5git/MIVAR/tree/main/guides)
 
 [Модели](https://github.com/iu5git/MIVAR/tree/main/models)
 
