@@ -1,10 +1,10 @@
 # MIVAR
 Репозиторий материалов по проектам МИВАР
 
-[Документация](https://github.com/iu5git/MIVAR/tree/main/guides)
+[Документация](./guides)
 
-[Модели](https://github.com/iu5git/MIVAR/tree/main/models)
+[Модели](./models)
 
-[Дистрибутивы](https://github.com/iu5git/MIVAR/tree/main/software)
+[Дистрибутивы](./software)
 
-Описание работы платформы Wi!Mi 2.1: https://youtu.be/PelNefLfWhQ
+Описание работы платформы Wi!Mi 2.1: [YouTube](https://youtu.be/PelNefLfWhQ), [VK](https://vk.com/video-95060986_456239053). 
