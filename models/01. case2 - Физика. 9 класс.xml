@@ -1,0 +1,220 @@
+<model id="{2c9b13e2-8370-42b0-a85c-fbc9911f0c06}" shortName="Лабораторная работа №4" formatXmlVersion="2.0" description="Model 1">
+<class id="{a77dfc98-a952-47b2-9ab9-2180415f5e7d}" shortName="Модель «Физика. 9 класс»" description="Модель &quot;Физика 9 класс&quot;">
+<parameters/>
+<rules/>
+<constraints/>
+<classes>
+<class id="c1aec9b1-efb8-45c8-b2c8-e5ef55d62b1c" shortName="Электромагнитное поле" description="Электромагнитное поле">
+<parameters/>
+<rules/>
+<constraints/>
+<classes>
+<class id="163d9b33-b18f-44c1-9799-7fe2f283fffc" shortName="Энергия магнитного поля" description="Физические величины, связанные с энергией магнитного поля">
+<parameters>
+<parameter id="262058cf-e97b-4e6d-8c1c-89d33df964ba" shortName="L" description="индуктивность [Гн]" type="double"/>
+<parameter id="b733ad24-5892-4176-a205-780157092a54" shortName="W" description="энергия магнитного поля [Дж]" type="double"/>
+<parameter id="d69d0a12-1b2f-4918-9bf5-1e7b2a31007d" shortName="I" description="сила тока [A]" type="double"/>
+</parameters>
+<rules>
+<rule id="94bc1fdb-36fb-4750-8434-02183672bdcf" shortName="Расчет энергии магнитного поля" relation="5757520c-884b-4e4c-93c6-68f493acc84b" resultId="y:b733ad24-5892-4176-a205-780157092a54" initId="a:262058cf-e97b-4e6d-8c1c-89d33df964ba;b:d69d0a12-1b2f-4918-9bf5-1e7b2a31007d" description="Расчет энергии магнитного поля (W=LI^2/2)"/>
+<rule id="dae8b967-d872-4e28-b391-970e5c771c70" shortName="Расчет силы тока по известной энергии магнитного поля" relation="efb9cabe-6bee-4d91-99a1-769b49757650" resultId="y:d69d0a12-1b2f-4918-9bf5-1e7b2a31007d" initId="a:b733ad24-5892-4176-a205-780157092a54;b:262058cf-e97b-4e6d-8c1c-89d33df964ba" description="Расчет силы тока по известной энергии магнитного поля (I=sqrt(2W/L))"/>
+<rule id="eea9d610-389b-43ec-bc5a-e2fa88572b8e" shortName="Расчет индуктивности по известной энергии магнитного поля" relation="dde785b1-fff9-43a7-9a0f-c86dc9088350" resultId="y:262058cf-e97b-4e6d-8c1c-89d33df964ba" initId="a:b733ad24-5892-4176-a205-780157092a54;b:d69d0a12-1b2f-4918-9bf5-1e7b2a31007d" description="Расчет индуктивности по известной энергии магнитного поля (L=2W/I^2)"/>
+</rules>
+<constraints/>
+<classes/>
+</class>
+<class id="26a833b0-397d-441a-93c8-20be89c0eeb4" shortName="Энергия электрического поля" description="Физические величины, связанные с энергией электрического поля">
+<parameters>
+<parameter id="58771359-99c5-4fe3-86ae-d558710e3838" shortName="U" description="Напряжение [В]" type="double"/>
+<parameter id="73b232d7-26cb-4c7f-ad50-31a4a3a4bb3d" shortName="С" description="ёмкость [Ф]" type="double"/>
+<parameter id="8fcbb93a-bcb7-404d-8eb6-84d194c7bd54" shortName="q" description="электрический заряд [Кл]" type="double"/>
+<parameter id="f5721798-243a-4ce0-b4ac-49044ff342bb" shortName="Eel" description="Энергия электрического поля [Дж]" type="double"/>
+</parameters>
+<rules>
+<rule id="230703ec-1976-427b-81c4-32f0161bd541" shortName="Расчет заряда по известной электроемкости" relation="32e683a9-b4c7-4dd9-a81a-b59a918d8c33" resultId="y:8fcbb93a-bcb7-404d-8eb6-84d194c7bd54" initId="a:73b232d7-26cb-4c7f-ad50-31a4a3a4bb3d;b:58771359-99c5-4fe3-86ae-d558710e3838" description="Расчет заряда по известной электроемкости (q=CU)"/>
+<rule id="7038cb10-0f30-4976-b83c-0d6c2fc8ec39" shortName="Расчет электроемкости по известному заряду" relation="22287e23-2ae2-466c-9531-b678dccb9b3b" resultId="y:73b232d7-26cb-4c7f-ad50-31a4a3a4bb3d" initId="a:8fcbb93a-bcb7-404d-8eb6-84d194c7bd54;b:58771359-99c5-4fe3-86ae-d558710e3838" description="Расчет электроемкости по известному заряду (C=q/U)"/>
+<rule id="8fcac60d-1180-4e55-a0e1-7c2fdee58875" shortName="Расчет энергии электрического поля по известному заряду" relation="a7ffad9c-e1a3-42cb-8a3f-6490e1173a61" resultId="y:f5721798-243a-4ce0-b4ac-49044ff342bb" initId="a:8fcbb93a-bcb7-404d-8eb6-84d194c7bd54;b:73b232d7-26cb-4c7f-ad50-31a4a3a4bb3d" description="Расчет энергии электрического поля по известному заряду (E=q^2/2C)"/>
+<rule id="c191ab83-f02a-4804-a46a-53455f1c2f13" shortName="Расчет напряжения на обкладках емкости" relation="22287e23-2ae2-466c-9531-b678dccb9b3b" resultId="y:58771359-99c5-4fe3-86ae-d558710e3838" initId="a:8fcbb93a-bcb7-404d-8eb6-84d194c7bd54;b:73b232d7-26cb-4c7f-ad50-31a4a3a4bb3d" description="Расчет напряжения на обкладках емкости (U=q/C)"/>
+<rule id="ed249c36-ff1b-4142-a659-04c6f79f7f87" shortName="Расчет энергии электрического поля по известному напряжению" relation="5757520c-884b-4e4c-93c6-68f493acc84b" resultId="y:f5721798-243a-4ce0-b4ac-49044ff342bb" initId="a:73b232d7-26cb-4c7f-ad50-31a4a3a4bb3d;b:58771359-99c5-4fe3-86ae-d558710e3838" description="Расчет энергии электрического поля по известному напряжению (E=CU^2/2)"/>
+</rules>
+<constraints/>
+<classes/>
+</class>
+<class id="2857aa37-0386-460b-83c5-93b67faccdaf" shortName="Индукция магнитного поля" description="Физические величины, связанные с индукцией магнитного поля">
+<parameters>
+<parameter id="16559a78-a48d-45c8-96a9-a3dedd648937" shortName="dl" description="длина проводника [м]" type="double"/>
+<parameter id="77aae918-9ad2-4f85-b10c-5181e15dddb5" shortName="B" description="индукция [Тл]" type="double"/>
+<parameter id="ddc96253-6548-412d-a376-056ca8195f16" shortName="I" description="сила тока [А]" type="double"/>
+<parameter id="eee45d7b-7f96-4736-8929-c11bc9f2519b" shortName="F" description="сила [Н]" type="double"/>
+</parameters>
+<rules>
+<rule id="002d5dd9-f30e-42e2-906c-2f9bd3797c21" shortName="Расчет магнитного потока по известно силе Ампера" relation="174d9c97-c87f-41fe-ab87-c585ea1744fb" resultId="y:77aae918-9ad2-4f85-b10c-5181e15dddb5" initId="a:eee45d7b-7f96-4736-8929-c11bc9f2519b;b:ddc96253-6548-412d-a376-056ca8195f16;c:16559a78-a48d-45c8-96a9-a3dedd648937" description="Расчет магнитного потока по известно силе Ампера (B=F/I/l))"/>
+<rule id="0751f7a2-23a9-4186-b058-d6ac31c6bb18" shortName="Расчет силы тока по известной силе Ампера" relation="174d9c97-c87f-41fe-ab87-c585ea1744fb" resultId="y:ddc96253-6548-412d-a376-056ca8195f16" initId="a:eee45d7b-7f96-4736-8929-c11bc9f2519b;b:77aae918-9ad2-4f85-b10c-5181e15dddb5;c:16559a78-a48d-45c8-96a9-a3dedd648937" description="Расчет силы тока по известной силе Ампера (I=F/B/l)"/>
+<rule id="1353b9d1-ed49-4564-91eb-936139808beb" shortName="Расчет силы Ампера" relation="076991f6-9575-496f-b3ea-b558d6ae4262" resultId="y:eee45d7b-7f96-4736-8929-c11bc9f2519b" initId="a:ddc96253-6548-412d-a376-056ca8195f16;b:77aae918-9ad2-4f85-b10c-5181e15dddb5;c:16559a78-a48d-45c8-96a9-a3dedd648937" description="Расчет силы Ампера (F=IBl)"/>
+<rule id="2f301a0a-faf8-4fc6-baf0-e63ea1841382" shortName="Расчет длины проводника по силе Ампера" relation="174d9c97-c87f-41fe-ab87-c585ea1744fb" resultId="y:16559a78-a48d-45c8-96a9-a3dedd648937" initId="a:eee45d7b-7f96-4736-8929-c11bc9f2519b;b:77aae918-9ad2-4f85-b10c-5181e15dddb5;c:ddc96253-6548-412d-a376-056ca8195f16" description="Расчет длины проводника по силе Ампера (dl=F/B/I)"/>
+</rules>
+<constraints/>
+<classes/>
+</class>
+</classes>
+</class>
+<class id="f29d9fce-3170-41fc-8c32-f27450b9ba9e" shortName="Законы взаимодействия и движения тел" description="Законы взаимодействия и движения тел">
+<parameters/>
+<rules/>
+<constraints/>
+<classes>
+<class id="29bf92e6-8ca5-4921-a496-c46f8e459bef" shortName="Закон всемирного тяготения" description="Физические величины, связанные с законом всемирного тяготения">
+<parameters>
+<parameter id="52d890c4-2884-4c65-b0cb-3c168da6cc6a" shortName="Fтяг" description="сила всемирного тяготения [Н]" type="double"/>
+<parameter id="9a0241ad-a305-4e18-9dd8-26bd5d41b365" shortName="r" description="расстояние между телаии [м]" type="double"/>
+<parameter id="a61e3c78-acb0-40db-a738-ae6ee7046a3b" shortName="G" defaultValue="0.00" description="гравитационная постоянная [Н∙м²/кг²]" type="double"/>
+<parameter id="bfa9b691-2d1b-4110-ac83-02b824ead726" shortName="m1" description="масса первого тела [кг]" type="double"/>
+<parameter id="f103a07c-228f-487b-ac86-59a595994545" shortName="m2" description="масса второго тела [кг]" type="double"/>
+</parameters>
+<rules>
+<rule id="18c10799-6dd4-4ec5-bde8-47a454e8f1d7" shortName="Расчет массы второго тела из закона всемирного тяготения" relation="83fb7fa8-7035-44c3-bedf-e8f81655e848" resultId="y:f103a07c-228f-487b-ac86-59a595994545" initId="a:52d890c4-2884-4c65-b0cb-3c168da6cc6a;d:bfa9b691-2d1b-4110-ac83-02b824ead726;b:9a0241ad-a305-4e18-9dd8-26bd5d41b365;c:a61e3c78-acb0-40db-a738-ae6ee7046a3b" description="Расчет массы второго тела из закона всемирного тяготения (m2 = F*r^2/G/m1)"/>
+<rule id="2c7f6037-8a57-470b-8237-9bde9b4d65d6" shortName="Расчет расстояния между объектами из закона всемирного тяготения" relation="a8370861-0322-4bf7-9a2c-2990903f7660" resultId="y:9a0241ad-a305-4e18-9dd8-26bd5d41b365" initId="a:a61e3c78-acb0-40db-a738-ae6ee7046a3b;d:52d890c4-2884-4c65-b0cb-3c168da6cc6a;b:bfa9b691-2d1b-4110-ac83-02b824ead726;c:f103a07c-228f-487b-ac86-59a595994545" description="Расчет расстояния между объектами из закона всемирного тяготения (r=sqrt(G*m1*m2/F))"/>
+<rule id="6777f16a-9862-457c-8b0e-0030867cd851" shortName="Расчет массы первого тела из закона всемирного тяготения" relation="83fb7fa8-7035-44c3-bedf-e8f81655e848" resultId="y:bfa9b691-2d1b-4110-ac83-02b824ead726" initId="a:52d890c4-2884-4c65-b0cb-3c168da6cc6a;d:f103a07c-228f-487b-ac86-59a595994545;b:9a0241ad-a305-4e18-9dd8-26bd5d41b365;c:a61e3c78-acb0-40db-a738-ae6ee7046a3b" description="Расчет массы первого тела из закона всемирного тяготения (m1 = F*r^2/G/m2)"/>
+<rule id="de4deb88-f5dd-41f6-894c-24b8a6c128cf" shortName="Закон всемирного тяготения" relation="eb801c0c-aea8-4973-b740-f7230bb22263" resultId="y:52d890c4-2884-4c65-b0cb-3c168da6cc6a" initId="a:a61e3c78-acb0-40db-a738-ae6ee7046a3b;d:9a0241ad-a305-4e18-9dd8-26bd5d41b365;b:bfa9b691-2d1b-4110-ac83-02b824ead726;c:f103a07c-228f-487b-ac86-59a595994545" description="Закон всемирного тяготения (F=G*m1*m2/r^2)"/>
+</rules>
+<constraints/>
+<classes/>
+</class>
+<class id="2b64e778-6a0b-4c65-a392-ba85317ca92f" shortName="Высота" description="Физические величины, связанные с вертикальным перемещением тела">
+<parameters>
+<parameter id="6595aaad-3710-43f3-a809-1c7590e64af2" shortName="t" description="время [с]" type="double"/>
+<parameter id="6b24c9d6-4789-4001-9dfc-9880ccabdc1b" shortName="v" description="скорость тела [м/с]" type="double"/>
+<parameter id="e1f86c7f-e62c-4d62-8cb9-e940ba2ada18" shortName="v0" defaultValue="0.00" description="начальная скорость [м/с]" type="double"/>
+<parameter id="e5d738bf-dba1-4bcd-8109-cfc4f266a99b" shortName="h" description="высота [м]" type="double"/>
+<parameter id="fa44d593-268e-46eb-b872-81343d7921f9" shortName="g" defaultValue="9.80" description="ускорение свободного падения [м/c²]" type="double"/>
+</parameters>
+<rules>
+<rule id="0b572fe6-7169-47c4-835f-fe93db7ea25d" shortName="Расчет скорости, с которой падает тело" relation="4469592a-95ea-44cd-8919-0d274c879c35" resultId="y:6b24c9d6-4789-4001-9dfc-9880ccabdc1b" initId="a:e1f86c7f-e62c-4d62-8cb9-e940ba2ada18;b:fa44d593-268e-46eb-b872-81343d7921f9;c:6595aaad-3710-43f3-a809-1c7590e64af2" description="Расчет скорости, с которой падает тело (v=v0+gt)"/>
+<rule id="213bbe52-2cad-434e-aa63-81a4eae96cc9" shortName="Уравнение изменения высоты падающего тела" relation="0a3cedbe-1c8b-47a9-b4cd-754d6f8baa6c" resultId="y:e5d738bf-dba1-4bcd-8109-cfc4f266a99b" initId="a:e1f86c7f-e62c-4d62-8cb9-e940ba2ada18;b:6595aaad-3710-43f3-a809-1c7590e64af2;c:fa44d593-268e-46eb-b872-81343d7921f9" description="Уравнение изменения высоты падающего тела (h=v0t+gt^2)"/>
+<rule id="dcfb9b15-37f8-43d2-a764-1a6bb26618ff" shortName="Расчет времени, в течение которого падает тело" relation="17514340-ba30-4fa6-b108-bbf041f13cdd" resultId="y:6595aaad-3710-43f3-a809-1c7590e64af2" initId="a:6b24c9d6-4789-4001-9dfc-9880ccabdc1b;b:e1f86c7f-e62c-4d62-8cb9-e940ba2ada18;c:fa44d593-268e-46eb-b872-81343d7921f9" description="Расчет времени, в течение которого падает тело (t=(v-v0)/g)"/>
+<rule id="fb0fba46-e51d-41e5-9ac2-b1e5e9ad6b46" shortName="Расчет начальной скорости падающего тела" relation="3048020e-72cf-4cd0-832a-cd60f8e93224" resultId="y:e1f86c7f-e62c-4d62-8cb9-e940ba2ada18" initId="a:6b24c9d6-4789-4001-9dfc-9880ccabdc1b;b:fa44d593-268e-46eb-b872-81343d7921f9;c:6595aaad-3710-43f3-a809-1c7590e64af2" description="Расчет начальной скорости падающего тела (v0=v-gt)"/>
+</rules>
+<constraints/>
+<classes/>
+</class>
+<class id="60b1c842-b6c3-4ba4-9f5d-1e181434e15e" shortName="Импульс тела" description="Физические величины, связанные с импульсом тела">
+<parameters>
+<parameter id="401809a4-4751-48fc-beea-24bac9d8ecdf" shortName="m" description="масса тела [кг]" type="double"/>
+<parameter id="42b984cf-57af-44ef-8f7f-34ff069909e0" shortName="v" description="скорость тела [м/с]" type="double"/>
+<parameter id="a2116539-1c42-4468-ad9b-77f83e55fd7a" shortName="p" description="импульс тела [кг∙м/с]" type="double"/>
+</parameters>
+<rules>
+<rule id="1e80cbd7-2373-4604-b122-c36cb1e9203e" shortName="Расчет массы по известному импульсу тела" relation="22287e23-2ae2-466c-9531-b678dccb9b3b" resultId="y:401809a4-4751-48fc-beea-24bac9d8ecdf" initId="a:a2116539-1c42-4468-ad9b-77f83e55fd7a;b:42b984cf-57af-44ef-8f7f-34ff069909e0" description="Расчет массы по известному импульсу тела (m=p/v)"/>
+<rule id="2f2319be-b719-4fb0-8efa-a3347090c2a6" shortName="Расчет импульса тела" relation="32e683a9-b4c7-4dd9-a81a-b59a918d8c33" resultId="y:a2116539-1c42-4468-ad9b-77f83e55fd7a" initId="a:401809a4-4751-48fc-beea-24bac9d8ecdf;b:42b984cf-57af-44ef-8f7f-34ff069909e0" description="Расчет импульса тела (p=mv)"/>
+<rule id="f4d997e0-e469-4300-89ab-a2d1499e344c" shortName="Расчет скорости по известному импульсу" relation="22287e23-2ae2-466c-9531-b678dccb9b3b" resultId="y:42b984cf-57af-44ef-8f7f-34ff069909e0" initId="a:a2116539-1c42-4468-ad9b-77f83e55fd7a;b:401809a4-4751-48fc-beea-24bac9d8ecdf" description="Расчет скорости по известному импульсу (v=p/m)"/>
+</rules>
+<constraints/>
+<classes/>
+</class>
+<class id="7ced6d28-0b93-422f-94d4-481faf700877" shortName="Равномерное движение тела" description="Физические величины, связанные с равномерным движением тела">
+<parameters>
+<parameter id="2e3df2df-1b86-42fb-b1b5-bf35cd47e61a" shortName="x" description="конечная координата по оси Х [м]" type="double"/>
+<parameter id="334f7a9e-b7d6-466f-87ec-12e0104a05ca" shortName="vx" description="скорость тела [м/c]" type="double"/>
+<parameter id="34618181-2647-4d70-95b0-e5453ad902d0" shortName="Sx" description="Проекция вектора перемещения на ось X [м]" type="double"/>
+<parameter id="5b6920d6-e8c7-47a3-8486-358c9152a4b7" shortName="x0" description="начальная координата по оси Х [м]" type="double"/>
+<parameter id="850c7174-b36d-4352-856e-d90963f5cc61" shortName="t" description="время [с]" type="double"/>
+</parameters>
+<rules>
+<rule id="56eb9b27-65ab-4328-86f0-ce44fb4e0165" shortName="Расчет скорости при равномерном движении" relation="22287e23-2ae2-466c-9531-b678dccb9b3b" resultId="y:334f7a9e-b7d6-466f-87ec-12e0104a05ca" initId="a:34618181-2647-4d70-95b0-e5453ad902d0;b:850c7174-b36d-4352-856e-d90963f5cc61" description="Расчет скорости при равномерном движении (v=S/t)"/>
+<rule id="592a8e2a-990f-4da7-a78e-927aecfb3a0e" shortName="Уравнение равномерного движения тела" relation="4469592a-95ea-44cd-8919-0d274c879c35" resultId="y:2e3df2df-1b86-42fb-b1b5-bf35cd47e61a" initId="a:5b6920d6-e8c7-47a3-8486-358c9152a4b7;b:334f7a9e-b7d6-466f-87ec-12e0104a05ca;c:850c7174-b36d-4352-856e-d90963f5cc61" description="Уравнение равномерного движения тела (x=x0+vt)"/>
+<rule id="831b31f1-71b5-43bb-972c-e4697308acc5" shortName="Расчет времени при равномерном движении при известных координатах и скорости" relation="17514340-ba30-4fa6-b108-bbf041f13cdd" resultId="y:850c7174-b36d-4352-856e-d90963f5cc61" initId="a:2e3df2df-1b86-42fb-b1b5-bf35cd47e61a;b:5b6920d6-e8c7-47a3-8486-358c9152a4b7;c:334f7a9e-b7d6-466f-87ec-12e0104a05ca" description="Расчет времени при равномерном движении при известных координатах и скорости (t=(x-x0)/v)"/>
+<rule id="e6bd3590-8c2e-4e60-99d0-52bc24023733" shortName="Расчет времени в пути при равномерном движении" relation="22287e23-2ae2-466c-9531-b678dccb9b3b" resultId="y:850c7174-b36d-4352-856e-d90963f5cc61" initId="a:34618181-2647-4d70-95b0-e5453ad902d0;b:334f7a9e-b7d6-466f-87ec-12e0104a05ca" description="Расчет времени в пути при равномерном движении (t=S/v)"/>
+<rule id="f17756de-efb3-4c57-a16b-dab22f850fe0" shortName="Расчет перемещения тела при равномерном движении при известной начальной координате" relation="63101933-312b-4694-be32-37f1ab3b345d" resultId="y:34618181-2647-4d70-95b0-e5453ad902d0" initId="a:2e3df2df-1b86-42fb-b1b5-bf35cd47e61a;b:5b6920d6-e8c7-47a3-8486-358c9152a4b7" description="Расчет перемещения тела при равномерном движении при известной начальной координате (S=x-x0)"/>
+<rule id="f6f3ef7f-ab91-4358-b4e0-d5b00afffaf6" shortName="Расчет перемещении при равномерном движении по известной скорости" relation="32e683a9-b4c7-4dd9-a81a-b59a918d8c33" resultId="y:34618181-2647-4d70-95b0-e5453ad902d0" initId="a:334f7a9e-b7d6-466f-87ec-12e0104a05ca;b:850c7174-b36d-4352-856e-d90963f5cc61" description="Расчет перемещении при равномерном движении по известной скорости (S=vt)"/>
+<rule id="fbc38155-a2f6-40fd-a27d-8e44189f03ac" shortName="Расчет начальной координаты из уравнения равномерного движения" relation="3048020e-72cf-4cd0-832a-cd60f8e93224" resultId="y:5b6920d6-e8c7-47a3-8486-358c9152a4b7" initId="a:2e3df2df-1b86-42fb-b1b5-bf35cd47e61a;b:334f7a9e-b7d6-466f-87ec-12e0104a05ca;c:850c7174-b36d-4352-856e-d90963f5cc61" description="Расчет начальной координаты из уравнения равномерного движения (x0=x-vt)"/>
+</rules>
+<constraints/>
+<classes/>
+</class>
+<class id="910ab81b-095b-48a6-ad45-2e11381c7a59" shortName="Периодические колебания" description="Физические величины, связанные с периодическими колебаниями">
+<parameters>
+<parameter id="0d964df4-36a7-46bf-b524-f689403bf9fb" shortName="v" description="скорость волны [м/с]" type="double"/>
+<parameter id="442591f6-221b-47af-8c74-95d552cc1a9f" shortName="ν" description="частота колебаний [Гц]" type="double"/>
+<parameter id="6237d7ec-a11e-480f-bddc-137fb392ec01" shortName="T" description="период колебаний [с]" type="double"/>
+<parameter id="e10f02de-aacd-4273-9844-d3013afb88ac" shortName="Ld" description="длина волны [м]" type="double"/>
+</parameters>
+<rules>
+<rule id="01aa06f4-d243-4678-8989-bfa680cbe06e" shortName="Расчет периода колебаний по известной скорости волны" relation="22287e23-2ae2-466c-9531-b678dccb9b3b" resultId="y:6237d7ec-a11e-480f-bddc-137fb392ec01" initId="a:e10f02de-aacd-4273-9844-d3013afb88ac;b:0d964df4-36a7-46bf-b524-f689403bf9fb" description="Расчет периода колебаний по известной скорости волны (T=Ld/v)"/>
+<rule id="1ce6c263-e77f-4ed1-a6d6-9ccb3770257d" shortName="Расчет длины волны по известному периоду" relation="22287e23-2ae2-466c-9531-b678dccb9b3b" resultId="y:0d964df4-36a7-46bf-b524-f689403bf9fb" initId="a:e10f02de-aacd-4273-9844-d3013afb88ac;b:6237d7ec-a11e-480f-bddc-137fb392ec01" description="Расчет длины волны по известному периоду (v=1/T)"/>
+<rule id="3f96e583-7328-409d-a916-b929d253d0d5" shortName="Расчет периода колебаний по известной частоте" relation="337956bc-438b-4e58-9c03-8aaf30a1fec9" resultId="y:6237d7ec-a11e-480f-bddc-137fb392ec01" initId="a:442591f6-221b-47af-8c74-95d552cc1a9f" description="Расчет периода колебаний по известной частоте (T=1/v)"/>
+<rule id="54c81481-2ece-4328-80e4-7254483efeec" shortName="Расчет длины волны по известной скорости" relation="32e683a9-b4c7-4dd9-a81a-b59a918d8c33" resultId="y:e10f02de-aacd-4273-9844-d3013afb88ac" initId="a:0d964df4-36a7-46bf-b524-f689403bf9fb;b:6237d7ec-a11e-480f-bddc-137fb392ec01" description="Расчет длины волны по известной скорости (Ld=vT)"/>
+<rule id="b0e0d6fd-ae97-4148-9e54-bb1e11d66e6a" shortName="Расчет частоты колебаний по известному периоду" relation="337956bc-438b-4e58-9c03-8aaf30a1fec9" resultId="y:442591f6-221b-47af-8c74-95d552cc1a9f" initId="a:6237d7ec-a11e-480f-bddc-137fb392ec01" description="Расчет частоты колебаний по известному периоду (v=1/T)"/>
+</rules>
+<constraints/>
+<classes/>
+</class>
+<class id="a0ca2034-16dc-425b-bb5c-a1bfc2facb01" shortName="Законы Ньютона" description="Физические величины, связанные с законами Ньютона">
+<parameters>
+<parameter id="67a19735-7da7-49ea-8bf5-3ee9de24af18" shortName="m" description="масса тела [кг]" type="double"/>
+<parameter id="ce5023aa-dcdd-4c2c-b71b-036b24834bef" shortName="F" description="результирующая сила [Н]" type="double"/>
+<parameter id="e91f9607-2600-46f8-a39e-be7c7ebb0239" shortName="a" description="ускорение [м/c²]" type="double"/>
+</parameters>
+<rules>
+<rule id="b0d0f692-4b84-4905-8656-080668329e9f" shortName="Второй закон Ньютона" relation="32e683a9-b4c7-4dd9-a81a-b59a918d8c33" resultId="y:ce5023aa-dcdd-4c2c-b71b-036b24834bef" initId="a:67a19735-7da7-49ea-8bf5-3ee9de24af18;b:e91f9607-2600-46f8-a39e-be7c7ebb0239" description="Второй закон Ньютона (F=ma)"/>
+<rule id="bfcf755d-426e-4a22-b35e-aa1f0585bab8" shortName="Расчет ускорения из второго закона Ньютона" relation="22287e23-2ae2-466c-9531-b678dccb9b3b" resultId="y:e91f9607-2600-46f8-a39e-be7c7ebb0239" initId="a:ce5023aa-dcdd-4c2c-b71b-036b24834bef;b:67a19735-7da7-49ea-8bf5-3ee9de24af18" description="Расчет ускорения из второго закона Ньютона (a=F/m)"/>
+<rule id="c8efadfa-efae-4dce-a249-9ef42997b154" shortName="Расчет массы из второго закона Ньютона" relation="22287e23-2ae2-466c-9531-b678dccb9b3b" resultId="y:67a19735-7da7-49ea-8bf5-3ee9de24af18" initId="a:ce5023aa-dcdd-4c2c-b71b-036b24834bef;b:e91f9607-2600-46f8-a39e-be7c7ebb0239" description="Расчет массы из второго закона Ньютона (m=F/a)"/>
+</rules>
+<constraints/>
+<classes/>
+</class>
+<class id="de32eb33-4acf-43a7-904a-74473ee92ce2" shortName="Равноускоренное движение тела" description="Физические величины, связанные с равноускоренным движением тела">
+<parameters>
+<parameter id="196f43ba-5926-42ce-a07a-a4069ded091e" shortName="v0" description="начальная скорость [м/c]" type="double"/>
+<parameter id="19db4b4b-afbe-4615-acfd-43ac790829a9" shortName="t" description="время [c]" type="double"/>
+<parameter id="576ab87f-8e7f-453b-84e9-a38359080892" shortName="r" description="радиус окружности [м]" type="double"/>
+<parameter id="60dca4fe-a5bc-49d3-b94b-c10dc61c5248" shortName="x0" description="начальная координата по оси X" type="double"/>
+<parameter id="616b242d-71fb-42d6-be05-83381a57c8f2" shortName="t0" defaultValue="0.00" description="начальное время [c]" type="double"/>
+<parameter id="6d3c348b-3d94-4ae5-a72a-c03c057a464b" shortName="x" description="конечная координата по оси X [м]" type="double"/>
+<parameter id="7b19d2ca-8e81-4002-896a-d71aef16aece" shortName="Δt" description="промежуток времени [с]" type="double"/>
+<parameter id="d517b3ba-5d19-4115-bb2a-a720b83a1719" shortName="a_ц" description="центробежное ускорение [м/c²]" type="double"/>
+<parameter id="dbe39f3b-d6c7-4ba0-8cc3-1c68c658d8ae" shortName="S" description="Перемещение в равноускоренном движении [м]" type="double"/>
+<parameter id="f2af2c9a-ffb5-4bb2-a338-5678afa0f4e6" shortName="v" description="скорость [м/c]" type="double"/>
+<parameter id="fdcff1dc-ba52-461e-bd2d-2f44761afde2" shortName="a" description="ускорение [м/c²]" type="double"/>
+</parameters>
+<rules>
+<rule id="0a138373-c5c6-4811-a158-16a85cc74409" shortName="Расчет промежутка времени при равноускоренном движении" relation="63101933-312b-4694-be32-37f1ab3b345d" resultId="y:7b19d2ca-8e81-4002-896a-d71aef16aece" initId="a:19db4b4b-afbe-4615-acfd-43ac790829a9;b:616b242d-71fb-42d6-be05-83381a57c8f2" description="Расчет промежутка времени при равноускоренном движении (dt=t-t0)"/>
+<rule id="25019b1e-e3ea-4c10-9dc4-c330bb3c1431" shortName="Расчет линенйного ускорения при равноускоренном движении" relation="17514340-ba30-4fa6-b108-bbf041f13cdd" resultId="y:fdcff1dc-ba52-461e-bd2d-2f44761afde2" initId="a:f2af2c9a-ffb5-4bb2-a338-5678afa0f4e6;b:196f43ba-5926-42ce-a07a-a4069ded091e;c:7b19d2ca-8e81-4002-896a-d71aef16aece" description="Расчет линенйного ускорения при равноускоренном движении (a=(v-v0)/dt)"/>
+<rule id="36a8492d-470e-406a-80cc-742a3ffbc660" shortName="Уравнение перемещения при равноускоренном движении" relation="a1c6adce-917c-4156-a72b-b506990af118" resultId="y:6d3c348b-3d94-4ae5-a72a-c03c057a464b" initId="a:60dca4fe-a5bc-49d3-b94b-c10dc61c5248;d:fdcff1dc-ba52-461e-bd2d-2f44761afde2;b:196f43ba-5926-42ce-a07a-a4069ded091e;c:7b19d2ca-8e81-4002-896a-d71aef16aece" description="Уравнение перемещения при равноускоренном движении (x=x0+v0*t+a*dt^2/2)"/>
+<rule id="45c0deda-f5c6-4691-8b41-72c59a441452" shortName="Расчет перемещения в равноускоренном движении по известным скоростям" relation="f50b73b2-7967-4c9a-b3f1-0ec126e387da" resultId="y:dbe39f3b-d6c7-4ba0-8cc3-1c68c658d8ae" initId="a:f2af2c9a-ffb5-4bb2-a338-5678afa0f4e6;b:196f43ba-5926-42ce-a07a-a4069ded091e;c:fdcff1dc-ba52-461e-bd2d-2f44761afde2" description="Расчет перемещения в равноускоренном движении по известным скоростям (S=(v^2-v0^2)/2a)"/>
+<rule id="7c61e152-44ac-477a-a10e-98dfbf474c13" shortName="Уравнение скорости в равноускоренном движении" relation="4469592a-95ea-44cd-8919-0d274c879c35" resultId="y:f2af2c9a-ffb5-4bb2-a338-5678afa0f4e6" initId="a:196f43ba-5926-42ce-a07a-a4069ded091e;b:fdcff1dc-ba52-461e-bd2d-2f44761afde2;c:7b19d2ca-8e81-4002-896a-d71aef16aece" description="Уравнение скорости в равноускоренном движении (v=v0+a*dt)"/>
+<rule id="9a3ec7cb-75b1-4218-886c-2785f5e62526" shortName="Уравнение перемещения при равноускоренном движении" relation="0a3cedbe-1c8b-47a9-b4cd-754d6f8baa6c" resultId="y:dbe39f3b-d6c7-4ba0-8cc3-1c68c658d8ae" initId="a:196f43ba-5926-42ce-a07a-a4069ded091e;b:7b19d2ca-8e81-4002-896a-d71aef16aece;c:fdcff1dc-ba52-461e-bd2d-2f44761afde2" description="Уравнение перемещения при равноускоренном движении (S=v0*dt+a*dt^2/2)"/>
+<rule id="b38a31d0-86b6-4e4d-ab46-af19327444b9" shortName="Расчет начальной скорости при равноускоренном движении" relation="3048020e-72cf-4cd0-832a-cd60f8e93224" resultId="y:196f43ba-5926-42ce-a07a-a4069ded091e" initId="a:f2af2c9a-ffb5-4bb2-a338-5678afa0f4e6;b:fdcff1dc-ba52-461e-bd2d-2f44761afde2;c:7b19d2ca-8e81-4002-896a-d71aef16aece" description="Расчет начальной скорости при равноускоренном движении (v0=v-a*dt)"/>
+<rule id="c09d4493-d002-48fe-95b1-4ed041cb68e5" shortName="Расчет начальной координаты при равноускоренном движении" relation="5d7b77a1-08aa-433c-a5f5-37e64c769f64" resultId="y:60dca4fe-a5bc-49d3-b94b-c10dc61c5248" initId="a:6d3c348b-3d94-4ae5-a72a-c03c057a464b;d:fdcff1dc-ba52-461e-bd2d-2f44761afde2;b:196f43ba-5926-42ce-a07a-a4069ded091e;c:7b19d2ca-8e81-4002-896a-d71aef16aece" description="Расчет начальной координаты при равноускоренном движении (x0=x-v0*dt-a*dt^2/2)"/>
+<rule id="c9da8a78-80fb-4b88-9903-47435547aca8" shortName="Расчет центробежного ускорения" relation="d9b2c11f-7847-4a7f-a2ad-36670c0861ba" resultId="y:d517b3ba-5d19-4115-bb2a-a720b83a1719" initId="a:f2af2c9a-ffb5-4bb2-a338-5678afa0f4e6;b:576ab87f-8e7f-453b-84e9-a38359080892" description="Расчет центробежного ускорения (а=v^2/R)"/>
+</rules>
+<constraints/>
+<classes/>
+</class>
+</classes>
+</class>
+</classes>
+</class>
+<relations>
+<relation id="076991f6-9575-496f-b3ea-b558d6ae4262" shortName="y=a*b*c" inObj="a:double;b:double;c:double" relationType="simple" description="произведение трех чисел" outObj="y:double">y=a*b*c</relation>
+<relation id="0a3cedbe-1c8b-47a9-b4cd-754d6f8baa6c" shortName="y=a*b+c*b*b/2" inObj="a:double;b:double;c:double" relationType="simple" description="уравнение перемещения для равноускоренного движения" outObj="y:double">y=a*b+c*b*b/2</relation>
+<relation id="174d9c97-c87f-41fe-ab87-c585ea1744fb" shortName="y=a/b/c" inObj="a:double;b:double;c:double" relationType="simple" description="частное трех чисел" outObj="y:double">y=a/b/c</relation>
+<relation id="17514340-ba30-4fa6-b108-bbf041f13cdd" shortName="y=(a-b)/c" inObj="a:double;b:double;c:double" relationType="simple" description="частное разности двух чисел и другого числа" outObj="y:double">y=(a-b)/c</relation>
+<relation id="22287e23-2ae2-466c-9531-b678dccb9b3b" shortName="y=a/b" inObj="a:double;b:double" relationType="simple" description="Частное двух чисел" outObj="y:double">y=a/b</relation>
+<relation id="3048020e-72cf-4cd0-832a-cd60f8e93224" shortName="y=a-b*c" inObj="a:double;b:double;c:double" relationType="simple" description="Разность числа и произведения двух чисел" outObj="y:double">y=a-b*c</relation>
+<relation id="32e683a9-b4c7-4dd9-a81a-b59a918d8c33" shortName="y=a*b" inObj="a:double;b:double" relationType="simple" description="Произвдение двух чисел" outObj="y:double">y=a*b</relation>
+<relation id="337956bc-438b-4e58-9c03-8aaf30a1fec9" shortName="y=1/a" inObj="a:double" relationType="simple" description="величина, обратная исходной" outObj="y:double">y=1/a</relation>
+<relation id="4469592a-95ea-44cd-8919-0d274c879c35" shortName="y=a+b*c" inObj="a:double;b:double;c:double" relationType="simple" description="Сумма числа и произведения двух чисел" outObj="y:double">y=a+b*c</relation>
+<relation id="5757520c-884b-4e4c-93c6-68f493acc84b" shortName="y=a*b*b/2" inObj="a:double;b:double" relationType="simple" description="половина произведения одного числа на квадрат другого" outObj="y:double">y=a*b*b/2</relation>
+<relation id="5d7b77a1-08aa-433c-a5f5-37e64c769f64" shortName="y=a-b*c-d*c*c/2" inObj="a:double;d:double;b:double;c:double" relationType="simple" description="многочлен второй степени" outObj="y:double">y=a-b*c-d*c*c/2</relation>
+<relation id="63101933-312b-4694-be32-37f1ab3b345d" shortName="y=a-b" inObj="a:double;b:double" relationType="simple" description="Разность двух чисел" outObj="y:double">y=a-b</relation>
+<relation id="83fb7fa8-7035-44c3-bedf-e8f81655e848" shortName="y=a*b*b/c/d" inObj="a:double;d:double;b:double;c:double" relationType="simple" description="частное произведения одного числа на квадрат другого и двух других чисел" outObj="y:double">y=a*b*b/c/d</relation>
+<relation id="a1c6adce-917c-4156-a72b-b506990af118" shortName="y=a+b*c+d*c*c/2" inObj="a:double;d:double;b:double;c:double" relationType="simple" description="многочлен второй степени" outObj="y:double">y=a+b*c+d*c*c/2</relation>
+<relation id="a7ffad9c-e1a3-42cb-8a3f-6490e1173a61" shortName="y=a*a/2/b" inObj="a:double;b:double" relationType="simple" description="половина частного квадрата одного числа и другого числа" outObj="y:double">y=a*a/2/b</relation>
+<relation id="a8370861-0322-4bf7-9a2c-2990903f7660" shortName="y=sqrt(a*b*c/d)" inObj="a:double;d:double;b:double;c:double" relationType="simple" description="квадратный корень произведения трех чисел, деленного на четвертое число" outObj="y:double">y=Math.sqrt(a*b*c/d)</relation>
+<relation id="d9b2c11f-7847-4a7f-a2ad-36670c0861ba" shortName="y=a*a/b" inObj="a:double;b:double" relationType="simple" description="частное квадрата первого числа и второго числа" outObj="y:double">y=a*a/b</relation>
+<relation id="dde785b1-fff9-43a7-9a0f-c86dc9088350" shortName="y=2*a/b/b" inObj="a:double;b:double" relationType="simple" description="удвоенное частное одного числа на квадрат другого" outObj="y:double">y=2*a/b/b</relation>
+<relation id="eb801c0c-aea8-4973-b740-f7230bb22263" shortName="y=a*b*c/d/d" inObj="a:double;d:double;b:double;c:double" relationType="simple" description="произведение трех чисел, деленное на квадрат четвертого числа" outObj="y:double">y=a*b*c/d/d</relation>
+<relation id="efb9cabe-6bee-4d91-99a1-769b49757650" shortName="y=sqrt(2*a/b)" inObj="a:double;b:double" relationType="simple" description="квадратный корень из удвоенного частного двух чисел" outObj="y:double">y=Math.sqrt(2*a/b)</relation>
+<relation id="f50b73b2-7967-4c9a-b3f1-0ec126e387da" shortName="y=(a*a-b*b)/2/c" inObj="a:double;b:double;c:double" relationType="simple" description="разность квадратов, деленная на удвоенное число" outObj="y:double">y=(a*a-b*b)/2/c</relation>
+</relations>
+</model>
