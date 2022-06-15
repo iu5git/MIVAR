@@ -5,6 +5,6 @@
 
 [Модели](https://github.com/iu5git/MIVAR/tree/main/models)
 
-[Дистрибутивы]()
+[Дистрибутивы](https://github.com/iu5git/MIVAR/tree/main/software)
 
 Описание работы платформы Wi!Mi 2.1: https://youtu.be/PelNefLfWhQ
