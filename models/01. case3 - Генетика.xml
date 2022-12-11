@@ -1,0 +1,183 @@
+<model id="{a43fc8cf-080d-449a-affe-5d966185ada6}" shortName="Наследование" formatXmlVersion="2.0" description="Model 1">
+<class id="{07b68e17-67d8-4f75-a0c0-79ee73b3cddd}" shortName="Наследование">
+<parameters/>
+<rules>
+<rule id="18add636-58a9-499c-be1e-edba7f45f7f0" shortName="Цвет волос" relation="980f1394-554b-4dd5-abbd-89a7b3e2e8e9" resultId="r:9edb76c7-d4f9-4c5c-951b-df83e96b9e66" initId="m:7b6a83fb-cc29-4838-97a6-7878ea4979fe;f:7b6a83fb-cc29-4838-97a6-7878ea4979fe" description="Определяет цвет волос ребенка по данным родителей"/>
+<rule id="3e8fb252-b3ef-47ed-adc8-d2f22c9e33e2" shortName="Группа крови" relation="eed2a8a4-f26d-48df-a172-20def5b5c671" resultId="r:fcb01118-250e-47ea-992b-ca45d8cf8d84" initId="m:7f79012f-2a2e-461d-a235-d62a03d434ef;f:62837768-15dd-4f5f-919b-79b48d5657d6" description="Определяет группу крови ребенка по данным родителей"/>
+<rule id="a7888033-2a64-419d-88ea-f2d9ebca90a7" shortName="Тип волос" relation="17bfc39c-05a4-4f05-83b9-cd720913951a" resultId="r:cc3206ab-5571-4cbe-9b96-6cde2e66cd8d" initId="m:e2911fe0-e317-432d-839c-007087de9ec9;f:0a5d0ddf-f093-4b6b-ad1d-a9d1a9f9b690" description="Определяет тип волос ребенка по данным родителей"/>
+<rule id="f36a4d81-6b26-43d4-b177-8f1da63b5ac5" shortName="Резус-фактор" relation="4ba73ec6-8374-4a0b-b449-c6c97624f0e2" resultId="r:c381b1c2-fd86-433e-985c-8da8c79fb21d" initId="m:781f4990-2d3e-403a-afed-902af6d0cf77;f:72fd0de1-e0c6-4652-b104-08d7efa1f265" description="Определяет резус-фактор ребенка по данным родителей"/>
+<rule id="f9341f9c-f3dc-4457-a5ab-005e9a2ec1aa" shortName="Цвет глаз" relation="ce226092-c04b-42a7-86fc-c98d9f6caff1" resultId="r:1b67bc68-6d1d-444f-b0ee-2d8a91a33bdb" initId="m:a22596d1-11b3-4fb5-bbc8-dbabbcba3c9f;f:b3fac862-183f-440b-b91d-9f86e2b8a972" description="Определяет цвет глаз ребенка по данным родителей"/>
+</rules>
+<constraints/>
+<classes>
+<class id="097c77b3-d8dd-4318-b245-9bf4af4508d0" shortName="Мама">
+<parameters>
+<parameter id="781f4990-2d3e-403a-afed-902af6d0cf77" shortName="Резус-фактор" defaultValue="положительный" type="string"/>
+<parameter id="7b6a83fb-cc29-4838-97a6-7878ea4979fe" shortName="Цвет волос" defaultValue="темный" type="string"/>
+<parameter id="7f79012f-2a2e-461d-a235-d62a03d434ef" shortName="Группа крови" defaultValue="1" type="string"/>
+<parameter id="a22596d1-11b3-4fb5-bbc8-dbabbcba3c9f" shortName="Цвет глаз" defaultValue="зеленые" type="string"/>
+<parameter id="e2911fe0-e317-432d-839c-007087de9ec9" shortName="Тип волос" defaultValue="прямые" type="string"/>
+</parameters>
+<rules/>
+<constraints/>
+<classes/>
+</class>
+<class id="5f40b8b1-9e16-4389-b633-88fc09e4b2cc" shortName="Папа">
+<parameters>
+<parameter id="0a5d0ddf-f093-4b6b-ad1d-a9d1a9f9b690" shortName="Тип волос" defaultValue="вьющиеся" type="string"/>
+<parameter id="5bcf286d-06bc-40e9-b7d0-e12a29442ab4" shortName="Цвет волос" defaultValue="рыжий" type="string"/>
+<parameter id="62837768-15dd-4f5f-919b-79b48d5657d6" shortName="Группа крови" defaultValue="4" type="string"/>
+<parameter id="72fd0de1-e0c6-4652-b104-08d7efa1f265" shortName="Резус-фактор" defaultValue="отрицательный" type="string"/>
+<parameter id="b3fac862-183f-440b-b91d-9f86e2b8a972" shortName="Цвет глаз" defaultValue="каре-зеленые" type="string"/>
+</parameters>
+<rules/>
+<constraints/>
+<classes/>
+</class>
+<class id="e3f7f471-ec1f-4f39-a431-abc2754d67ab" shortName="Ребенок">
+<parameters>
+<parameter id="00e6a4fe-0ecb-4b29-9779-107b1b13d23e" shortName="Ваш ребенок" type="string"/>
+<parameter id="1b67bc68-6d1d-444f-b0ee-2d8a91a33bdb" shortName="Цвет глаз" type="string"/>
+<parameter id="9edb76c7-d4f9-4c5c-951b-df83e96b9e66" shortName="Цвет волос" type="string"/>
+<parameter id="c381b1c2-fd86-433e-985c-8da8c79fb21d" shortName="Резус-фактор" type="string"/>
+<parameter id="cc3206ab-5571-4cbe-9b96-6cde2e66cd8d" shortName="Тип волос" type="string"/>
+<parameter id="fcb01118-250e-47ea-992b-ca45d8cf8d84" shortName="Группа крови" type="string"/>
+</parameters>
+<rules>
+<rule id="f6c44505-1b62-48ac-8f47-a63dd0f395b5" shortName="Полное описание" relation="c51b8cf0-63e6-457b-9b75-a208d5342a93" resultId="y:00e6a4fe-0ecb-4b29-9779-107b1b13d23e" initId="haircolor:9edb76c7-d4f9-4c5c-951b-df83e96b9e66;blood:fcb01118-250e-47ea-992b-ca45d8cf8d84;hairtype:cc3206ab-5571-4cbe-9b96-6cde2e66cd8d;rezus:c381b1c2-fd86-433e-985c-8da8c79fb21d;eyecolor:1b67bc68-6d1d-444f-b0ee-2d8a91a33bdb" description="Формирует сводку данных о ребенке"/>
+</rules>
+<constraints/>
+<classes/>
+</class>
+</classes>
+</class>
+<relations>
+<relation id="17bfc39c-05a4-4f05-83b9-cd720913951a" shortName="Тип волос (отношение)" inObj="m:string;f:string" relationType="prog" outObj="r:string">var m,f,r="",x="вьющиеся",y ="прямые";&#xd;
+m=String(m).toLowerCase();&#xd;
+f=String(f).toLowerCase();&#xd;
+if (m==x || f==x) {&#xd;
+	r=x;&#xd;
+} &#xd;
+else {&#xd;
+	if (m==y &amp;&amp; f==y) {&#xd;
+		r=y;&#xd;
+	}&#xd;
+	else {&#xd;
+		r="Исходные данные заданы неверно!";&#xd;
+	}&#xd;
+}</relation>
+<relation id="4ba73ec6-8374-4a0b-b449-c6c97624f0e2" shortName="Резус-фактор (отношение)" inObj="m:string;f:string" relationType="prog" outObj="r:string">var m,f,r,x="положительный",y ="отрицательный";&#xd;
+m=String(m).toLowerCase();&#xd;
+f=String(f).toLowerCase();&#xd;
+if (m==x || f==x) {&#xd;
+	r=x;&#xd;
+} &#xd;
+else {&#xd;
+	if (m==y &amp;&amp; f==y) {&#xd;
+		r=y;&#xd;
+	}&#xd;
+	else {&#xd;
+		r="Исходные данные заданы неверно!";&#xd;
+	}&#xd;
+}</relation>
+<relation id="980f1394-554b-4dd5-abbd-89a7b3e2e8e9" shortName="Цвет волос (отношение)" inObj="m:string;f:string" relationType="prog" outObj="r:string">var m,f,r="",dark="темный",light="светлый",red="рыжий",rorl="светлый либо рыжий";&#xd;
+m=String(m).toLowerCase();&#xd;
+f=String(f).toLowerCase();&#xd;
+if (m==dark || f==dark) {&#xd;
+	r=dark;	&#xd;
+}&#xd;
+else {&#xd;
+	if ((m==light &amp;&amp; f==red) || (f==light &amp;&amp; m==red)) {&#xd;
+		r=rorl;&#xd;
+	}&#xd;
+	else {&#xd;
+		if (m==light &amp;&amp; f==light) {&#xd;
+			r=light;&#xd;
+		}&#xd;
+		else {&#xd;
+			if (m==red &amp;&amp; f==red) {&#xd;
+				r=red;&#xd;
+			}&#xd;
+			else {&#xd;
+				r="Исходные данные заданы неверно!";&#xd;
+			}&#xd;
+		}&#xd;
+	}&#xd;
+}</relation>
+<relation id="c51b8cf0-63e6-457b-9b75-a208d5342a93" shortName="Полное описание (отношение)" inObj="haircolor:string;blood:string;hairtype:string;rezus:string;eyecolor:string" relationType="prog" outObj="y:string">var haircolor,hairtype,eyecolor,blood,rezus;&#xd;
+y="цвет волос - "+haircolor+", тип волос - "+hairtype+", цвет глаз - "+eyecolor+", группа крови - "+blood+", резус-фактор - "+rezus;</relation>
+<relation id="ce226092-c04b-42a7-86fc-c98d9f6caff1" shortName="Цвет глаз (отношение)" inObj="m:string;f:string" relationType="prog" outObj="r:string">var m,f,r="",brown="карие",green="зеленые",brgr="каре-зеленые",blue="голубые",gray="серые",brorgr="карие либо зеленые",blorgr="голубые либо серые";&#xd;
+m=String(m).toLowerCase();&#xd;
+f=String(f).toLowerCase();&#xd;
+if (m==brgr || f==brgr) {&#xd;
+	r=brgr;&#xd;
+	}&#xd;
+	else {&#xd;
+		if ((m==brown &amp;&amp; f==green) || (f==brown &amp;&amp; m==green)) {&#xd;
+			r=brorgr; &#xd;
+		}&#xd;
+		else {&#xd;
+			if (m==brown || f==brown) {&#xd;
+				r=brown;&#xd;
+			}&#xd;
+			else {&#xd;
+				if (m==green || f==green) {&#xd;
+					r=green;&#xd;
+				}&#xd;
+				else {&#xd;
+					if ((m==blue &amp;&amp; f==gray) || (f==blue &amp;&amp; m==gray)) {&#xd;
+						r=blorgr;&#xd;
+					}&#xd;
+					else {&#xd;
+						if (m==blue || f==blue) {&#xd;
+							r=blue;&#xd;
+						}&#xd;
+						else {&#xd;
+							if (m==gray || f==gray) {&#xd;
+								r=gray;&#xd;
+							}&#xd;
+							else {&#xd;
+								r="Исходные данные заданы неверно!";&#xd;
+						}&#xd;
+					}&#xd;
+				}&#xd;
+			}&#xd;
+		}&#xd;
+	}&#xd;
+}</relation>
+<relation id="eed2a8a4-f26d-48df-a172-20def5b5c671" shortName="Группа крови (отношение)" inObj="m:string;f:string" relationType="prog" outObj="r:string">var m,f,r,b1="1",b2="2",b3="3",b4="4",allbut="все, кроме первой",b1l="первая",b12l="первая либо вторая",b13l="первая либо третья",b23l="вторая либо третья",any="любая";
+m=String(m).toLowerCase();
+f=String(f).toLowerCase();
+if ((m==b1 &amp;&amp; f==b4) || (f==b1 &amp;&amp; m==b4)) {
+	r=b23l;
+} 
+else {
+	if (m==b4 || f==b4) {
+		r=allbut;
+	}
+	else {
+		if (m==b1 &amp;&amp; f==b1) {
+			r=b1l;
+		}
+		else {
+			if ((m==b2 &amp;&amp; f==b3) || (f==b2 &amp;&amp; m==b3)) {
+				r=any;
+			}
+			else {
+				if (m==b2 || f==b2) {
+					r=b12l;
+				}
+				else {
+					if (m==b3 || f==b3) {
+						r=b13l;
+					}
+					else {
+						r="Исходные данные заданы неверно!";
+					}
+				}
+			}
+		}
+	}
+}</relation>
+</relations>
+</model>
